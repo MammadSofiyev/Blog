@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% block title%}
+
+{% endblock%}
+
+{% block content%}
+<br>
+     <h1>Add Post</h1>
+     <br/><br/>
+     <div class="col-md-6">
+     <form method="POST" enctype="multipart/form-data">
+       {% csrf_token %}
+       {{form.media}}
+       {{ form.as_p }}
+     
+     <button class="btn btn-danger">Post</button>
+     </div>
+<br/>  
+<a href="{% url 'home' %}" class="btn btn-success">Main menu</a>
+
+</from>
+{% endblock %}

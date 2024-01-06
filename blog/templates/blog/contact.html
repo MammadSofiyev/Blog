@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+{% block title%}
+{% endblock%}
+
+{% block content%}
+<br>
+<h1>Contact us</h1>
+<br/><br/>
+<div class="col-md-6">
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-danger">SUBMIT</button>
+  </form>
+</div>
+
+<br/>  
+<a href="{% url 'home' %}" class="btn btn-success">Main menu</a>
+</form>
+{% endblock %}

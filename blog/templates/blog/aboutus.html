@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block title%}
+
+{% endblock%}
+
+{% block content%}
+<br/>
+     <h1>About us</h1>
+     <br/><br/>
+     <div class="col-md-6">
+     {{ body }}
+     </div>
+<br/>  
+<a href="{% url 'home' %}" class="btn btn-success">Main menu</a>
+{% endblock %}
